@@ -12,6 +12,7 @@
     "configuration-as-code",
     "painless-config"
   ],
+  "repository": "microsoft/painless-config-as-code",
   "author": "Microsoft Open Source Programs Office",
   "license": "MIT"
 }

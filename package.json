@@ -1,6 +1,6 @@
 {
   "name": "painless-config-as-code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A configuration-as-code resolver for environment variables",
   "main": "lib/index.js",
   "scripts": {

@@ -1,3 +1,5 @@
+Painless configuration-as-code
+
 MIT License
 
 Copyright (c) 2017 Microsoft

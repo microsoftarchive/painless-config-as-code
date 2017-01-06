@@ -1,0 +1,17 @@
+{
+  "name": "painless-config-as-code",
+  "version": "0.0.1",
+  "description": "A configuration-as-code resolver for environment variables",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "config",
+    "node",
+    "configuration-as-code",
+    "painless-config"
+  ],
+  "author": "Microsoft Open Source Programs Office",
+  "license": "MIT"
+}

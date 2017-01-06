@@ -4,7 +4,10 @@
   "description": "A configuration-as-code resolver for environment variables",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha && eslint ."
+  },
+  "engines": {
+    "node": "~6.9.0"
   },
   "keywords": [
     "config",
@@ -14,5 +17,17 @@
   ],
   "repository": "microsoft/painless-config-as-code",
   "author": "Microsoft Open Source Programs Office",
-  "license": "MIT"
+  "contributors": [
+    "Wilcox, Jeff <jwilcox@microsoft.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "painless-config": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.12.2",
+    "mocha": "^3.2.0"
+  }
 }

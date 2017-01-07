@@ -2,6 +2,21 @@
 
 Environment variable resolution using configuration-as-code logic on top of painless-config. For Node.js apps.
 
+## Environment value resolution
+
+order        | type                 | provider of value       | notes
+------------ | -------------------- | ----------------------- | ----------
+1            | process env variable | painless-config         | process.env in node
+2            | env.json file value  | painless-config         | will walk up the directory hierarchy until finding an env.json
+3            | _env_.json file val  | painless-config-as-code | will look for an ./env/_env_.json, such as ./env/prod.json
+
+## How to use the library
+
+```
+const painlessConfigAsCode = require('painless-config-as-code')();
+const someValue = painlessConfigAsCode.get('SOME_VALUE');
+```
+
 ### Unofficial but useful
 
 This component was developed by the Open Source Programs Office at Microsoft. The OSPO team

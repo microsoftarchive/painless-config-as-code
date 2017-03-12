@@ -1,6 +1,6 @@
 {
   "name": "painless-config-as-code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A configuration-as-code resolver for environment variables",
   "main": "lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "repository": "microsoft/painless-config-as-code",
   "author": "Microsoft Open Source Programs Office",
   "contributors": [
-    "Wilcox, Jeff <jwilcox@microsoft.com>"
+    "Jeff Wilcox <jwilcox@microsoft.com>"
   ],
   "license": "MIT",
   "dependencies": {

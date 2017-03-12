@@ -9,11 +9,12 @@ order        | type                 | provider of value       | notes
 1            | process env variable | painless-config         | process.env in node
 2            | env.json file value  | painless-config         | will walk up the directory hierarchy until finding an env.json
 3            | _env_.json file val  | painless-config-as-code | will look for an ./env/_env_.json, such as ./env/prod.json
+4            | env package          | npm package             | package defined in package.json or ENVIRONMENT_MODULES_NAME
 
 ## How to use the library
 
 ```
-const painlessConfigAsCode = require('painless-config-as-code')();
+const painlessConfigAsCode = require('painless-config-as-code');
 const someValue = painlessConfigAsCode.get('SOME_VALUE');
 ```
 
@@ -53,3 +54,19 @@ For more information see the [Code of Conduct
 FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com)
 with any additional questions or comments.
+
+# Changes
+
+## 0.0.2
+
+- Adds support for environment-containing npm package(s)
+  - Multiple packages are supported, with the first package values winning
+  - Packages can be defined in an app's `package.json` as well as environment variables such as `ENVIRONMENT_MODULES`
+  - Environment-variable based package names have higher precedence than `package.json`-based
+- Can be required without calling as a function when no custom initialization options are needed
+- The environment directory name can now be configured via the `ENVIRONMENT_DIRECTORY` key (and also `ENVIRONMENT_DIRECTORY_KEY` to change that variable name)
+- The variable keys used to define the configuration environment can now be customized via `CONFIGURATION_ENVIRONMENT_KEYS`
+
+## 0.0.1
+
+- Initial release

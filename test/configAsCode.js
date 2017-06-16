@@ -43,6 +43,10 @@ describe('configuration', () => {
 
   describe('config as code', () => {
 
+    it('required module works without calling as a function', () => {
+      assert.isDefined(library.get, 'no get method present on the library');
+    });
+
     it('app service JSON + env config', () => {
       const testProvider = createAppServiceWrappedConfiguration('test-site.domain');
       const configResult = library({ provider: testProvider });

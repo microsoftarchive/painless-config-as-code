@@ -33,7 +33,7 @@ There are many other configuration libraries for Node, but of course everyone
 has their own favorite. Consider one of these if you'd like a more fully supported
 library.
 
-This library is most like `node-config`, with the different being that it is
+This library is most like `node-config`, with the difference being that it is
 limited to just JSON files at this time for values, and its use of `painless-config`
 to resolve environment variables or other configuration values located up the
 directory hierarchy.
